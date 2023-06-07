@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4864808faa.js" crossorigin="anonymous"></script>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) 
+        {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()""></i>
+            </nav>
+            <div class="header-text">
+                <p>Front / Back end Developer</p>
+                <h1>Hi, I'm <span>Kamil</span><br>Banaszek From Poland</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--------------ABOUT------------------------------------------>
+
+<div id="about">
+
+     <div class="container">
+
+         <div class="row">
+
+            <div class="about-col-1">
+
+                 <img src="me3.jpg">
+
+            </div>
+
+            <div class="about-col-2">
+
+                <h1 class="sub-title">About me</h1>
+                
+                <p>
+                    I am a university student majoring in computer science. I have the knowledge and skills needed to design,
+                    creating and maintaining applications and systems
+                    IT. I can work with different languages
+                    programming, as well as with various tools and
+                    technologies. Also, I am a conscientious person
+                    meticulous, who always strives to achieve the intended goals
+                    purposes
+                </p>
+
+                <div class="tab-titles">
+
+                    <p class="tab-links active-link" onclick="opentab('sk')">Skills</p>
+                    <p class="tab-links" onclick="opentab('exp')">Experience</p>
+                    <p class="tab-links" onclick="opentab('edc')">Education</p>
+
+                </div>
+                
+                <div class="tab-contents active-tab" id="sk">
+                    <ul>
+                        <li><span>Front-End</span><br><i class="fa-solid fa-arrow-right"></i> Java-Scrpit<br><i class="fa-solid fa-arrow-right"></i> CSS<br><i class="fa-solid fa-arrow-right"></i> HTML<br><i class="fa-solid fa-arrow-right"></i> PHP</li>
+                        <li><span>Back-End</span><br><i class="fa-solid fa-arrow-right"></i> C++<br><i class="fa-solid fa-arrow-right"></i> Python<br><i class="fa-solid fa-arrow-right"></i> C</li>
+                        <li><span>Other skills</span><br><i class="fa-solid fa-arrow-right"></i> computer graphics <br><i class="fa-solid fa-arrow-right"></i> computer networks <br><i class="fa-solid fa-arrow-right"></i> computer architecture</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="exp">
+                    <ul>
+                        <li><span>Work on my own</span><br>Implementation of projects at university in various programming languages
+                        <br>(Projects posted on GitHub)</li>
+                      
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="edc">
+                    <ul>
+                        <li><span>Lublin University of Technology</span><br>Computer science engineering 2022 - now</li>
+                        <li><span>Secondary school </span><br>"Zespół szkół elektronicznych" 2018-2022 - IT technician </li>
+                        <li><span>Professional qualification</span><br> EE.09 Programming, creating and administering websites
+                            internet and databases <br> EE.08 Installation and operation of computer systems, devices
+                            peripherals and networks</li>
+                    </ul>
+                </div>
+
+            </div>
+
+         </div>
+
+      </div>
+ </div>
+
+
+ 
+
+  <!---------------------ABOUT----------------------------------->
+
+<div id="services">
+
+    <div class="container">
+
+      <h1 class="sub-title">My services</h1>
+
+        <div class="services-list">
+
+            <div>
+                <i class="fa-brands fa-spotify"></i>
+                 <h2>Web Design </h2>
+                 <p>
+                    Lorem ipsum is placeholder text commonly used in the graphic, 
+                    print, and pub lishing industries for previewing
+                    <a href="#">Learn more</a>
+                 </p>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-spotify"></i>
+                <h2>UI/UX Design </h2>
+                <p>
+                   Lorem ipsum is placeholder text commonly used in the graphic, 
+                   print, and pub lishing industries for previewing
+                   <a href="#">Learn more</a>
+                </p>
+           </div>
+
+           <div>
+
+            <i class="fa-brands fa-spotify"></i>
+            <h2>App Design </h2>
+            <p>
+               Lorem ipsum is placeholder text commonly used in the graphic, 
+               print, and pub lishing industries for previewing
+               <a href="#">Learn more</a>
+            </p>
+
+       </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------portfolio------------------->
+<div id="portfolio">
+  <div class="container">
+   
+
+        <h1 class="sub-title"> My work</h1>
+        <div class="work-list">
+
+           <div class="work">
+            <img src="work-1.png" >
+
+            <div class="layer">
+                 <h3>Social Media App</h3>
+                 <p>Lorem ipsum is placeholder text commonly used in the graphic, 
+                    print, and pub lishing industries for previewing</p>
+            </div>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+
+           </div>
+
+           <div class="work">
+            <img src="work-2.png" >
+            <div class="layer">
+                <h3>Social Media App</h3>
+                <p>Lorem ipsum is placeholder text commonly used in the graphic, 
+                   print, and pub lishing industries for previewing</p>
+           </div>
+           <a href="#"><i class="fas fa-external-link-alt"></i></a>
+           </div>
+           
+
+           <div class="work">
+            <img src="work-3.png" >
+            <div class="layer">
+                <h3>Social Media App</h3>
+                <p>Lorem ipsum is placeholder text commonly used in the graphic, 
+                   print, and pub lishing industries for previewing</p>
+           </div>
+           <a href="#"><i class="fas fa-external-link-alt"></i></a>
+           </div>
+        </div>
+
+    <a href="#" class="btn">See more</a>
+  </div>
+</div>
+<!--------------------------------contact--------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+              
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100014469062012" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/_gambling_man_/" target="_blank"><i class="fab fa-instagram" ></i></a>
+                    <a href="663-567-471" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://www.instagram.com/_gambling_man_/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="banaszekk123@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></i></a>
+                    
+                </div>
+                <a href="" class="btn btn2">download CV</a>
+            </div>
+            
+            <div class="contact-right"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+
+    <script>
+        var sidemenu =document.getElementById("sidemenu");
+        function openmenu()
+        {
+            sidemenu.style.right="0";
+        }
+        function closemenu()
+        {
+            sidemenu.style.right="-200px";
+        }
+    </script>
+
+</body>
+</html>
